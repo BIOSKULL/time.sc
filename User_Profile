@@ -1,0 +1,106 @@
+//BDD lang script
+
+Feature: I should be able to edit user profile
+ As a user of time.sc, I should be able to edit user profile
+ 
+ 
+  //General Information - First Name
+  Scenario: I should be able to change First Name
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am change First Name
+            WHEN I am clicking Save button
+              THEN I should see First Name changed
+              AND I should see message "Profile updated"
+              AND I should NOT see any errors
+        
+  //General Information - Last Name
+  Scenario: I should be able to change Last Name
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am change Last Name
+            WHEN I am clicking Save button
+              THEN I should see Last Name changed
+              AND I should see message "Profile updated"
+              AND I should NOT see any errors
+        
+  //General Information - City
+  Scenario: I should be able to change City
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am change City
+            AND I choose City from the dropdown list
+              WHEN I am clicking Save button
+                THEN I should see City changed
+                AND I should see message "Profile updated"
+                AND I should NOT see any errors
+          
+  //General Information - Email
+  Scenario: I should be able to change Email
+   GIVEN I am accessing time.sc as a Regular User
+    AND I am accessing Settings and Profile
+     AND I am clicking Edit Profile
+      AND I am change Email
+       WHEN I am clicking Save button
+        THEN I should see Email changed
+        AND I should see message "Profile updated"
+        AND I should NOT see any errors
+        
+  //Social Networks - Facebook
+  Scenario: I should be able to link with my Facebook
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am clicking Facebook Link
+            AND I am logged in on Facebook
+              AND I clickin OK in pop-up window
+                WHEN I am clicking Save button
+                  THEN I should see Facebook linked
+                  AND I should see Name and Last Name in front of FB icon
+                  AND I should see message "Profile updated"
+                  AND I should NOT see any errors
+                  
+  //Social Networks - VK
+  Scenario: I should be able to link with my VK
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am clicking VK Link
+            AND I am logged in on VK
+              AND I clickin OK in pop-up window
+                WHEN I am clicking Save button
+                  THEN I should see VK linked
+                  AND I should see Name and Last Name in front of VK icon
+                  AND I should see message "Profile updated"
+                  AND I should NOT see any errors
+                  
+  //Social Networks - Google+
+  Scenario: I should be able to link with my Google+
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am clicking Google+ Link
+            AND I am logged in on Google+
+              AND I clickin OK in pop-up window
+                WHEN I am clicking Save button
+                  THEN I should see Google+ linked
+                  AND I should see Name and Last Name in front of Google+ icon
+                  AND I should see message "Profile updated"
+                  AND I should NOT see any errors
+                  
+  //Password
+  Scenario: I should be able to change Password
+    GIVEN I am accessing time.sc as a Regular User
+      AND I am accessing Settings and Profile
+        AND I am clicking Edit Profile
+          AND I am Enter Old Password
+            AND I am enter New Password
+              AND I am enter New Password again
+                WHEN I am clicking Save button
+                  THEN I should see message "Profile updated"
+                  AND I should see Password was changed
+                  AND I should be able to access account with New Password
+                  AND I should NOT see any errors
